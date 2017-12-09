@@ -1,0 +1,43 @@
+*,
+*::after, 
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;   
+
+    @include respond(phone) {
+
+    }
+    //unnecessary, because media query asks the question if the width < 600px, and next one asks if < 900px
+
+    @include respond(tabL) { // !asks width < 1200?
+        font-size: 56.25%; //1rem = 9px, 9/16 = 56.25%
+    }
+
+    @include respond(tabP) { // !asks width < 900?
+        font-size: 50%; //1rem = 8px, 8/16 = 50%      
+    }
+
+    @include respond(bigD) {
+        font-size: 75%; //1rem = 12px, 12/16 = 75%
+    }   
+}
+
+body {
+    box-sizing: border-box; 
+    padding: 2rem; 
+
+    @include respond(tabP) { 
+        padding: 0;     
+    }
+}
+
+::selection {
+    color: $grey; 
+}
+
+

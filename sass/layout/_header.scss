@@ -1,0 +1,47 @@
+.header {
+	height: 100vh;
+	background-image: $background, url("../img/header-small.jpg");
+	// Photo by Lawton Cook on Unsplash: https://unsplash.com/photos/QVcR8xg6l98
+	background-size: cover;
+	background-position: center;
+	position: relative;
+
+	//to target retina screen and safari-browser
+	@media (min-resolution: 192dpi) and (min-width: 37.5em), 
+	(-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), 
+	(min-width: 75em) {
+		background-image: $background, url("../img/header.jpg");
+	}
+	
+	.header__text-box {
+		width: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+
+		-webkit-backface-visibility: hidden;
+		backface-visibility: hidden;
+	}
+}
+
+.header .btn {
+	&:link,
+	&:visited {
+		transition: all .2s;
+	}
+
+	&:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+	}
+
+	&:active {
+		transform: translateY(-1px);
+		box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	}
+}
+
+
+  

@@ -1,0 +1,49 @@
+.row {
+    max-width: 114rem;
+    margin: 0 auto;
+    display: table;
+
+    &:not(:last-child) {
+        margin-bottom: 8rem;
+
+        @media only screen and (max-width : 768px) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @media only screen and (max-width : 768px) {
+        max-width: 45rem;
+    }
+
+    @include clearfix;
+
+    [class^="col-"] {
+        float: left;
+        
+        &:not(:last-child) {
+            margin-right: 4rem;
+
+            @media only screen and (max-width : 768px) {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media only screen and (max-width : 768px) {
+            width: 100% !important;
+        }
+
+    }
+
+    .col-1-of-2 {
+        width: calc((100% - #{4rem}) / 2);
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .col-1-of-3 {
+        width: calc((100% - 2 * #{4rem}) / 3);
+        display: table-cell;
+        vertical-align: middle;
+    }
+}

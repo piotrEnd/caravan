@@ -1,0 +1,66 @@
+.header, 
+.section-features,
+.section-kontakt {
+    border-radius: 10px;
+
+    @include respond(tabP) { 
+        border-radius: 0;     
+    }
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    backface-visibility: hidden;
+}
+
+a:hover {
+    color:$grey;
+}
+
+.btn {
+	&:link,
+	&:visited {
+        text-transform: uppercase;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 1.6rem;
+		padding: 1.5rem 4rem;
+		background-color: $whitish;
+		color: $olive;
+		border-radius: 10rem;
+		letter-spacing: 1rem;
+        position: relative; 
+    }
+}
+
+.scroll {
+    width: 5rem;
+    height: 5rem;
+    border: 3px solid $whitish;
+    color: $olive;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    font-size: 4rem;
+    text-align: center;
+    /* moving arrows */	
+    text-shadow: 0 -1.5rem 0 $olive, 0 -3rem 0 $olive; 
+    overflow: hidden; 
+    transition: 1s ease;
+
+
+    &:hover {
+        text-shadow: 0 -1.5rem 0 $whitish, 0 -3rem 0 $whitish; 
+        color: $whitish; 
+        cursor: pointer;
+    }
+
+    .fa-angle-down {
+        animation: arrow 2s infinite linear;
+    }
+}    

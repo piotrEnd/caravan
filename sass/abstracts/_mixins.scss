@@ -1,0 +1,22 @@
+@mixin clearfix {
+    &::after {
+        content: ""; 
+        display: table;
+        clear: both; 
+    }
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content }; //phone: 0 - 600px
+    }
+    @if $breakpoint == tabP {
+        @media only screen and (max-width: 56.25em) { @content }; //tablet portrait: 600 - 900px
+    }
+    @if $breakpoint == tabL {
+        @media only screen and (max-width: 75em) { @content }; //tablet landscape: 900 - 1200px
+    }
+    @if $breakpoint == bigD {
+        @media only screen and (min-width: 100em) { @content }; //big desktop: 1600px and more
+    }
+}
