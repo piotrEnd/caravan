@@ -7,3 +7,5 @@ Webpage is responsive:
 * fluid grid adapts to current used viewport
 * CSS images are optimized for different widths
 * styles change on breakpoints
+
+Visit at: https://piotrend.github.io/caravan/
