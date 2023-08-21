@@ -1,9 +1,14 @@
 ## caravan
 ----
 
-**Information architecture and design:**
+**Information architecture:**
 
-Caravaning is a style of living, often associated with youthful years. To have a caravan means to be self-suffient and freewheeling at the same time. Landing page for salesman with heart of craftsman trying to expand his business. Retro-nostalgic style mixed with compact offer message and thus pretty straightforward.
+Caravaning embodies a lifestyle often linked to carefree youthful years, representing a blend of self-sufficiency and carefree spontaneity. It's a landing page of a salesman with the heart of a craftsman, driven to expand his business.
+
+**Information architecture:**
+
+The design combines a retro-nostalgic aesthetic with a succinct and direct offer. Images and a responsive grid dynamically adjust to the user's viewport. The Lato font carries a hint of friendliness while maintaining a professional demeanour.
+
 
 Exercise in using:
 * Sass with SCSS syntax
